@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .wrapper {
+        display: flex;
+        justify-content: center;
+      }
+      .container {
+        display: grid;
+        grid-template-rows: 20vh 25vh 1fr 35vh;
+        grid-template-columns: 20vw 1fr;
+        grid-template-areas:
+          "logo nav"
+          "script script"
+          "main main"
+          "foot foot";
+        gap: 2px;
+        width: 90vw;
+      }
+      #logo {
+        grid-area: logo;
+        border-radius: 50%;
+      }
+      #head {
+        grid-area: nav;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px pink;
+        font-size: large;
+        font-weight: 900;
+        font-style: italic;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      #head a {
+        color: rgb(230, 108, 108);
+      }
+      #head ul {
+        height: 80%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      #head ul li {
+        list-style: none;
+      }
+      #script {
+        grid-area: script;
+        font-size: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      @media (max-width: 550px) {
+        #script {
+          font-size: 2rem;
+        }
+      }
+      .role {
+        color: rgb(233, 83, 83);
+      }
+      #carts {
+        grid-area: main;
+        border-radius: 50px;
+        margin-bottom: 3%;
+      }
+      #carts p {
+        text-align: center;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 2rem;
+        font-style: italic;
+        text-decoration: underline;
+        font-weight: 900;
+        text-shadow: 5px 5px 5px pink;
+      }
+      .cart {
+        margin: 1.5%;
+        border-radius: 15px;
+        box-shadow: 5px 5px 5px grey;
+      }
+      .cart img {
+        width: 120px;
+        height: 170px;
+      }
+      .cart figcaption {
+        text-align: center;
+        padding-bottom: 2%;
+        color: blue;
+        font-weight: 900;
+        font-style: italic;
+      }
+      .cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      #footer {
+        grid-area: foot;
+        text-align: center;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-weight: 800;
+        box-shadow: -3px -3px 5px pink;
+        border-radius: 50px;
+      }
+      .links {
+        margin-bottom: 2%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="box" id="logo">
+          <img src="https://tse4.mm.bing.net/th?id=OIP.2nNKAwVQAXG8XdnHlL8dsQHaIg&pid=Api&P=0&h=180" alt="" width="90%" />
+        </div>
+        <div class="box" id="head">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#carts">Gifts</a></li>
+            <li><a href="#footer">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="box" id="script">
+          <p>Send <span class="role"></span></p>
+        </div>
+
+        <div class="box" id="carts">
+          <p id="title">Special Gifts:</p>
+
+          <div class="cards">
+            <div class="cart">
+              <figure>
+                <img src="https://tse4.mm.bing.net/th?id=OIP.ZdQe3mtR0atNMEzwUfED9AHaGK&pid=Api&P=0&h=180" alt="" />
+                <hr color="red" size="5%" />
+              </figure>
+              <figcaption>20% Discount on teddies</figcaption>
+            </div>
+            <div class="cart">
+              <figure>
+                <img src="https://images.pexels.com/photos/85773/pexels-photo-85773.jpeg?cs=srgb&dl=bloom-close-up-colorful-85773.jpg&fm=jpg" alt="" />
+                <hr color="red" size="5%" />
+              </figure>
+              <figcaption>10% Discount on flowers</figcaption>
+            </div>
+            <div class="cart">
+              <figure>
+                <img src="https://wallpapercave.com/wp/wp3079202.jpg" alt="" id="pen" />
+                <hr color="red" size="5%" />
+              </figure>
+              <figcaption>30% Discount on diaries</figcaption>
+            </div>
+            <div class="cart">
+              <figure>
+                <img src="https://tse2.mm.bing.net/th?id=OIP.iUEjENA1SJumlNfUGYnm8QHaFb&pid=Api&P=0&h=180" alt="" id="pen" />
+                <hr color="red" size="5%" />
+              </figure>
+              <figcaption>25% Discount on chocolates</figcaption>
+            </div>
+            <div class="cart">
+              <figure>
+                <img src="https://tse1.mm.bing.net/th?id=OIP.2XddWOTUC_E54PDOQ18i5QHaHN&pid=Api&P=0&h=180" alt="" id="pen" />
+                <hr color="red" size="5%" />
+              </figure>
+              <figcaption>15% Discount on wallets</figcaption>
+            </div>
+            <div class="cart">
+              <figure>
+                <img src="https://m.media-amazon.com/images/I/81LmGbkSPnL.AC_SL1500.jpg" alt="" id="pen" />
+                <hr color="red" size="5%" />
+              </figure>
+              <figcaption>5% Discount on pens</figcaption>
+            </div>
+            <div class="cart">
+              <figure>
+                <img src="https://wallpaperaccess.com/full/3046105.jpg" alt="" id="pen" />
+                <hr color="red" size="5%" />
+              </figure>
+              <figcaption>5% Discount on watches</figcaption>
+            </div>
+            <div class="cart">
+              <figure>
+                <img src="https://i.etsystatic.com/11971667/r/il/6b5ccd/3077815830/il_fullxfull.3077815830_rm64.jpg" alt="" id="pen" />
+                <hr color="red" size="5%" />
+              </figure>
+              <figcaption>35% Discount on mugs</figcaption>
+            </div>
+          </div>
+        </div>
+        <div class="box" id="footer">
+          <h2>Contact Us</h2>
+          <hr size="3%" color="pink" width="50%" />
+          <div class="links">
+            <a href="mailto:shop@example.com" target="_blank">
+              <img src="https://tse1.mm.bing.net/th?id=OIP.IpB5yPUkCFHOzlmM-O7ncAHaFW&pid=Api&P=0&h=180" alt="" width="3.8%" />
+            </a>
+            <a href="https://www.facebook.com/" target="_blank"
+              ><img src="https://logos-world.net/wp-content/uploads/2020/04/Facebook-Logo.png" alt="" width="3.8%"
+            /></a>
+            <a href="https://www.whatsapp.com/" target="_blank"
+              ><img src="https://logos-world.net/wp-content/uploads/2020/05/Logo-WhatsApp.png" alt="" width="3.5%"
+            /></a>
+            <a href="https:www.instagram.com" target="_blank"
+              ><img src="http://pngimg.com/uploads/instagram/instagram_PNG10.png" alt="" width="4%"
+            /></a>
+          </div>
+
+          <span>&copy; Copyright. All Rights Reserved. </span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script
+    src="https://kit.fontawesome.com/58a810656e.js"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    var typeData = new Typed(".role", {
+      strings: ["Love", "Gifts", "Happiness"],
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 80,
+      backDelay: 1000,
+    });
+  </script>
+</html>
